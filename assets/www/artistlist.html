@@ -1,0 +1,26 @@
+
+<div id="header" class="header">
+    <h1>Artists</h1>
+</div>
+<div id="header2">
+    <table width="100%">
+      <tr>
+        <td><button type="button" onclick="javascript:popular()">Popular</button></td>
+        <td><button type="button" onclick="javascript:new_artists()">New</button></td>
+        <td><button type="button" onclick="javascript:show_search()">Search</button></td>
+      </tr>
+      <tr>
+        <td colspan="3">
+            <form id="enteractivity" name="enteractivity" >
+                <input type="text" name="query" id="search_input">
+            </form>
+        </td>
+      </tr>
+    </table>
+</div>
+
+<div id="wrapper">
+  <ul id="artistList" class="icon-list"></ul>
+</div>
+<div id="busy">Loading...</div>
+

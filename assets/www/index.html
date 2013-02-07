@@ -1,0 +1,145 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <link rel="stylesheet" href="css/styles.css" />
+    <link href="css/blue.monday/jplayer.blue.monday.css" rel="stylesheet" type="text/css" />
+    <title>Mideastunes</title>
+    <script type="text/javascript" charset="utf-8">
+    /**
+     * Function called when page has finished loading.
+     */
+    function init() {
+
+      var myPlaylist = new jPlayerPlaylist({
+        jPlayer: "#jquery_jplayer_N",
+        cssSelectorAncestor: "#jp_container_N"
+      }, [
+        {
+          title:"",
+          artist:"",
+          mp3:"",
+          oga:"",
+          poster: ""
+        }
+      ], {
+        playlistOptions: {
+          enableRemoveControls: true,
+          autoPlay:true
+        },
+        swfPath: "js",
+        supplied: "webmv,oga, mp3"
+      });
+
+      // Get div elements for later
+      div0 = document.getElementById('main_container');
+      div1 = document.getElementById('secondary_container');
+
+      // Set height of container
+        var height = window.innerHeight;
+        var el = document.getElementById('header');
+        var heightHeader = parseInt(getComputedStyle(el).height, 10);
+        var heightMtop = parseInt(getComputedStyle(el).marginTop, 10);
+        var heightMbot = parseInt(getComputedStyle(el).marginBottom, 10);
+        console.log("height="+height);
+        console.log("Hheight="+heightHeader);
+        console.log("margin="+heightMtop);
+      document.getElementById('container').style.height = (height - heightHeader - heightMtop - heightMbot - 10) + "px";
+
+        // Register for PhoneGap deviceready event
+        document.addEventListener("deviceready", function() {console.log("PhoneGap initialized.")}, false);
+
+      // Load first page into container
+        loadPage("artistlist.html");
+    }
+    </script>
+ </head>
+  <body id="body" onload="init();">
+    <h3 id="header">
+    </h3>
+    <div id='container'>
+        <div id='main_container'></div>
+        <div id="secondary_container"></div>
+        <!-- <div id="player">
+          <h1>Audio Player</h1>
+          <p id="audio_position">0.000 sec</p>
+          <a href="#" onclick="playAudio()"><img id="play" src="img/PlayerControlPlay.png"></a>
+          <a href="#" onclick="stopAudio()"><img id="stop" src="img/StopRecordingButton.png"></a>
+        </div> -->
+    </div>
+    <div id="footer">
+      <ul class="toolbar">
+        <li><a onclick="loadPage('artistlist.html')" class="nav"><img src="img/ToolbarHome.png"/></a></li>
+        <li><img src="img/ToolbarFavorites.png"/></li>
+        <li><img src="img/ToolbarArtists.png"/></li>
+        <li><a onclick="loadplayer()" class="nav"><img src="img/ToolbarPlayer.png"/></a></li>
+    </div>
+    <div id="player">
+      <div id="jp_container_N" class="jp-video jp-video-270p">
+        <div class="jp-type-playlist">
+          <div id="jquery_jplayer_N" class="jp-jplayer"></div>
+          <div class="jp-gui">
+            <div class="jp-video-play">
+              <a href="javascript:;" class="jp-video-play-icon" tabindex="1">play</a>
+            </div>
+            <div class="jp-interface">
+              <div class="jp-progress">
+                <div class="jp-seek-bar">
+                  <div class="jp-play-bar"></div>
+                </div>
+              </div>
+              <div class="jp-current-time"></div>
+              <div class="jp-duration"></div>
+              <div class="jp-controls-holder">
+                <ul class="jp-controls">
+                  <li><a href="javascript:;" class="jp-previous" tabindex="1">previous</a></li>
+                  <li><a href="javascript:;" class="jp-play" tabindex="1">play</a></li>
+                  <li><a href="javascript:;" class="jp-pause" tabindex="1">pause</a></li>
+                  <li><a href="javascript:;" class="jp-next" tabindex="1">next</a></li>
+                  <li><a href="javascript:;" class="jp-stop" tabindex="1">stop</a></li>
+                  <li><a href="javascript:;" class="jp-mute" tabindex="1" title="mute">mute</a></li>
+                  <li><a href="javascript:;" class="jp-unmute" tabindex="1" title="unmute">unmute</a></li>
+                  <li><a href="javascript:;" class="jp-volume-max" tabindex="1" title="max volume">max volume</a></li>
+                </ul>
+                <div class="jp-volume-bar">
+                  <div class="jp-volume-bar-value"></div>
+                </div>
+                <ul class="jp-toggles">
+
+
+                  <li><a href="javascript:;" class="jp-shuffle" tabindex="1" title="shuffle">shuffle</a></li>
+                  <li><a href="javascript:;" class="jp-shuffle-off" tabindex="1" title="shuffle off">shuffle off</a></li>
+                  <li><a href="javascript:;" class="jp-repeat" tabindex="1" title="repeat">repeat</a></li>
+                  <li><a href="javascript:;" class="jp-repeat-off" tabindex="1" title="repeat off">repeat off</a></li>
+                </ul>
+              </div>
+              <div class="jp-title">
+                <ul>
+                  <li></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="jp-playlist">
+            <ul>
+              <!-- The method Playlist.displayPlaylist() uses this unordered list -->
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <input id="id_container" type="hidden" value="">
+
+    <script type="text/javascript" charset="utf-8" src="cordova-2.3.0.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/iscroll.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/iscroll.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/jquery.jsonp-2.4.0.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/pages.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/jquery.jplayer.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/jplayer.playlist.min.js"></script>
+  </body>
+</html>

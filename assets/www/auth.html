@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta name="viewport" content="width=320; user-scalable=no" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <title>Auth Demo</title>
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
+    <script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="cordova-2.3.0.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/auth.js"></script>
+</head>
+
+<body onload="init()">
+
+<div id="loginPage" data-role="page">
+
+    <div data-role="header">
+        <h1>Auth Demo</h1>
+    </div>
+
+    <div data-role="content">
+
+        <form id="loginForm">
+        <div data-role="fieldcontain" class="ui-hide-label">
+            <label for="username">Username:</label>
+            <input type="text" name="username" id="username" value="" placeholder="Username" />
+        </div>
+
+        <div data-role="fieldcontain" class="ui-hide-label">
+            <label for="password">Password:</label>
+            <input type="password" name="password" id="password" value="" placeholder="Password" />
+        </div>
+
+        <input type="submit" value="Login" id="submitButton">
+        </form>
+
+    </div>
+
+    <div data-role="footer">
+        <h4>&copy; Camden Enterprises</h4>
+    </div>
+
+</div>
+
+</body>
+</html>

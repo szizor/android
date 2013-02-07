@@ -1,0 +1,373 @@
+#container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow-x:hidden;
+    border: 1px solid black;
+}
+
+button {
+    display:block;
+    text-align:center;
+    margin:0 auto;
+    width:100%;
+    height:2em;
+}
+
+.info {
+    border:1px solid black;
+    background:#eeeeff;
+    margin:5px;
+    padding:5px;
+}
+#main_container {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+#secondary_container {
+    width: 100%;
+    position: absolute;
+    left: 100%;
+    height: 100%;
+}
+#player {
+    width: 100%;
+    position: absolute;
+    bottom: -1060px;
+    border:1px solid black;
+    background:#eeeeff;
+    margin:5px;
+    padding:5px;
+}
+*
+{
+    font-family:sans-serif;
+    font-size: 14px;
+    color: #444444;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body,
+html,
+ul
+{
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+
+    /*width: : 100%;*/
+    background: #DCDCDC;
+}
+
+h3 {
+    font-size: 16px;
+}
+
+ul {
+    clear: both;
+    list-style-type: none;
+    background: #FFFFFF;
+}
+
+.icon-list li {
+    clear: both;
+    padding-top: 4px;
+    padding-bottom: 0px;
+    padding-left: 4px;
+    padding-right: 0px;
+    margin-left: 0px;
+    border-bottom:solid 1px #CCCCCC;
+    display:block;
+}
+
+.icon-list li .list-icon {
+    float: left;
+    margin-right: 12px;
+    height: 75px; /* TODO: use 100x100 pics instead of scaling */
+}
+
+
+.icon-list li {
+    height: 50px;
+}
+
+.icon-list .line1 {
+    padding-top: 14px;
+}
+
+.icon-list li a {
+    text-decoration:none;
+    display: block;
+    margin:0px;
+}
+
+
+.icon-list li .line1 {
+    font-size: 16px;
+    margin-top:0px;
+    margin-bottom:0px;
+    padding-top:10px;
+    padding-bottom:0px;
+    padding-left: 10px;
+    font-weight: bold;
+}
+
+.icon-list li .line2 {
+    margin-top:4px;
+    margin-bottom:0px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    color: #666666;
+}
+
+.icon-list li .bubble {
+    clear:both;
+    position: absolute;
+    right: 12px;
+    background-color: #ECEFF2;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -khtml-border-radius: 10px;
+    border-radius: 10px;
+    font-size:14px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 8px;
+    padding-right: 8px;
+    margin: 0px;
+    margin-top: -50px;
+    text-align: center;
+}
+
+.icon-list li .action-icon {
+    position: absolute;
+    right: 12px;
+    margin-top: -50px;
+}
+
+.header {
+    position:  absolute;
+    text-align: center;
+    background: #666666; /* for non-css3 browsers */
+    background: -webkit-gradient(linear, left top, left bottom, from(#666666), to(#666666), color-stop(.6,#333));
+    color: #FFFFFF;
+    top: 0px;
+    height: 40px;
+    width: 100%;
+    border-bottom: solid 1px #444444;
+}
+
+.header > h1 {
+    font-size: 16px;
+    font-weight: bold;
+    color: #FFFFFF;
+}
+
+.header > .nav {
+    position: absolute;
+    left: 12px;
+    height:100%;
+    /*padding-top: 12px;*/
+    padding-right: 12px;
+    border-right: solid 1px #333333;
+}
+.header > .bio {
+    border-left: 1px solid #333333;
+    height: 100%;
+    top: 0;
+    padding-left: 12px;
+    position: absolute;
+    right: 12px;
+}
+
+.header a {
+    text-decoration:none;
+    color: #FFFFFF;
+}
+
+#header2 {
+    /*position: absolute;*/
+    margin-top: 30px;
+    padding-top: 10px;
+    padding-left: 8px;
+    background: #ECEFF2; /* for non-css3 browsers */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#FBFBFB), color-stop(100%,#ECEFF2));
+    color: #000000;
+    font-weight: bold;
+    top: 41px;
+    height: 30px;
+    left: 0px;
+    right: 0px;
+    border-bottom: solid 1px #C8CBCE;
+    z-index:1;
+}
+
+#header2 > h2 {
+    font-size: 14px;
+    padding:0px;
+    margin:0px;
+}
+
+#wrapper {
+    /*position: absolute;*/
+    margin-top: 40px;
+    width: 100%;
+    overflow: auto;
+    bottom:0;
+}
+
+#busy {
+    display:none;
+    /*position: absolute;*/
+    top: 50%;
+    left: 50%;
+    margin-left: -65px;
+    margin-top: -31px;
+    color: #FFFFFF;
+    font-size: 24px;
+    z-index:6;
+    background-color: #000000;
+    opacity:0.5;
+    width:100px;
+    height:32px;
+    padding: 30px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -khtml-border-radius: 10px;
+    border-radius: 10px;
+
+}
+
+#employeeDetails {
+    padding: 8px;
+    padding-bottom: 0px;
+}
+
+#employeeDetails img {
+    float: left;
+    margin-right: 8px;
+    height: 100px;
+    vertical-align: top;
+}
+.left{
+    display:inline-block;
+}
+.left.image{
+    padding: 2px;
+}
+.data-container{
+    vertical-align: top;
+}
+.bold{
+    font-weight: bold;
+}
+#song{
+    padding-top: 10px;
+    padding-left: 8px;
+    background: #ECEFF2; /* for non-css3 browsers */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#FBFBFB), color-stop(100%,#ECEFF2));
+    background: none repeat scroll 0 0 #666666;
+    border-bottom: 1px solid #444444;
+    color: #FFF;
+    font-weight: bold;
+    top: 41px;
+    height: 30px;
+    left: 0px;
+    right: 0px;
+    border-bottom: solid 1px #C8CBCE;
+    z-index:1;
+}
+.player{
+  bottom: 100px;
+  /*position: absolute;*/
+  width: 100%;
+  z-index: 88;
+  background: #00997F
+}
+#play_icon{
+    background-image: url("../img/18/play.png");
+}
+#pause_icon{
+    background-image: url("../img/18/pause.png");
+}
+#stop_icon{
+    background-image: url("../img/18/stop.png");
+}
+#wrapper.search_pos{
+    top: 114px;
+}
+#search_input{
+    width:100%;
+    display:none;
+}
+#footer{
+    width: 100%;
+    bottom: 0px;
+    position: fixed;
+    background: #666666; /* for non-css3 browsers */
+    background: -webkit-gradient(linear, left top, left bottom, from(#666666), to(#666666), color-stop(.6,#333));
+    color: #FFFFFF;
+
+    padding: 3px 30px 1px;
+    border: solid 1px #444444;
+}
+#footer-bio{
+    width: 100%;
+    bottom: 14px;
+    position: absolute;
+    background: #666666; /* for non-css3 browsers */
+    background: -webkit-gradient(linear, left top, left bottom, from(#666666), to(#666666), color-stop(.6,#333));
+    color: #FFFFFF;
+
+    padding: 3px 30px 1px;
+    border: solid 1px #444444;
+}
+#categories{
+    background-image: url("/img/BioIconGenres.png");
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    color: white;
+    display: block;
+    float: left;
+    margin: 10px;
+    padding: 0 0 0 20px;
+    width: 50px;
+}
+#country{
+    background-image: url(/img/BioIconCountry.png);
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    color: white;
+    display: block;
+    float: left;
+    margin: 10px;
+    padding: 0 0 0 20px;
+    width: 50px;
+}
+.toolbar{
+
+}
+.toolbar li{
+    float: left;
+    clear:none;
+    margin-right: 15%;
+    border-bottom: none;
+}
+#progress {
+    -webkit-border-radius: 10px;
+    background-color: rgba(0,0,0,.7);
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    height: 80px;
+    left: 60px;
+    line-height: 80px;
+    margin: 0 auto;
+    position: absolute;
+    text-align: center;
+    top: 120px;
+    width: 200px;
+}
