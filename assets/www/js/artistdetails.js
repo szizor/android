@@ -49,7 +49,7 @@ function playStream(url) {
     myaudio.id = 'playerMyAdio';
     myaudio.play();
   } catch (e) {
-    alert('no audio support!');
+    alert('no audio support, please reload!');
   }
 }
 
